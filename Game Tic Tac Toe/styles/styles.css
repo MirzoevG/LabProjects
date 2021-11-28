@@ -1,0 +1,157 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(240, 246, 255);
+}
+
+.header-description{
+  font-size: 36px;
+  color: black;
+  text-align: center;
+  font-weight: 400;
+}
+
+.chooseSidePanel{
+  width: 280px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.header-label{
+  font-size: 22px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.chooseSideButton{
+  padding: 5px 20px;
+  font-size: 22px;
+  margin-left: 75px;
+  background-color: rgb(0, 0, 126);
+  color: rgb(189, 189, 189);
+  margin-top: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chooseSideButton:hover{
+  color: white;
+  background-color: rgb(0, 214, 251);
+  box-shadow: inset 0 0 10px;
+}
+
+.wrapper{
+  background-image: url('../images/doska.png');
+  width: 900px;
+  height: 880px;
+  border-radius: 14px;
+  box-shadow: 0px 0px 0px 10px(rgb(102, 102, 102));
+  margin: 0 auto;
+  margin-top: 50px;
+  z-index: 0;
+  position: relative;
+  display: none;
+}
+
+.wrapper-field{
+  width: 900px;
+  height: 880px;
+  display: grid;
+  grid-template-columns: 280px 280px 285px;
+  grid-template-rows: 280px 280px 280px;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+}
+
+.cell{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
